@@ -1,0 +1,33 @@
+{
+  "name": "itaditya",
+  "version": "1.1.0",
+  "description": "A personal card for Aditya Agarwal (@dev__adi)",
+  "main": "index.js",
+  "bin": "index.js",
+  "files": ["index.js"],
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itaditya/itaditya.git"
+  },
+  "keywords": [
+    "card",
+    "npm",
+    "npm card",
+    "npx",
+    "npx card",
+    "business card"
+  ],
+  "author": "Aditya Agarwal <adityaa803@gmail.com> (http://adi.surge.sh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itaditya/itaditya/issues"
+  },
+  "homepage": "https://github.com/itaditya/itaditya#readme",
+  "devDependencies": {
+    "boxen": "^2.1.0",
+    "chalk": "^2.4.2"
+  }
+}
