@@ -1,12 +1,19 @@
 {
   "name": "itaditya",
-  "version": "1.1.0",
+  "version": "2.0.1",
   "description": "A personal card for Aditya Agarwal (@dev__adi)",
   "main": "index.js",
-  "bin": "index.js",
-  "files": ["index.js"],
+  "bin": {
+    "itaditya": "./bin/card.js"
+  },
+  "files": [
+    "bin/card.js",
+    "bin/output"
+  ],
   "scripts": {
-    "start": "node index.js"
+    "prepublish": "npm run build",
+    "build": "node build.js",
+    "dev": "npm run build && node ./bin/card.js"
   },
   "repository": {
     "type": "git",

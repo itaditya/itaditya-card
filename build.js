@@ -1,20 +1,14 @@
+#!/usr/bin/env node
+
 'use strict';
 
+const fs = require('fs');
+const path = require('path');
 const chalk = require('chalk');
 const boxen = require('boxen');
 
 const { name: pkgName } = require('./package');
-
-const data = {
-  name: 'Aditya Agarwal',
-  work: 'Intern @hackerrank, GSoC @github, Blogger👨‍💻',
-  opensource: 'Circlebars, JS Image Editor, Code Runner',
-  twitter: 'dev__adi',
-  github: 'itaditya',
-  blog: 'adityaa803',
-  linkedin: 'itsaditya',
-  web: 'https://adi.surge.sh',
-};
+const data = require('./data');
 
 const enhancedData = {
   name: chalk.white(`               ${data.name}`),
@@ -48,13 +42,13 @@ ${chalk.white.bold('       Card:')}  ${enhancedData.npx}
 const card = boxen(result, {
   padding: 1,
   margin: {
+    left: 2,
+    right: 2,
     top: 3,
     bottom: 3,
   },
   borderStyle: 'round',
   borderColor: 'green',
-  float: 'center',
 });
 
-console.clear();
-console.log(card);
+fs.writeFileSync(path.join(__dirname, 'bin', 'output'), card);
